@@ -40,14 +40,11 @@ scatters = []
 embeddings_0 = np.load(folder_path+"batch_embeddings_at_"+str(0)+'.csv')
 legend = [ "PC1101_chiffchaffs_birds", "F72726_chiffchaffs_birds", "F72726_chiffchaffs_birds", "108_littleowls_birds", "0712_pipits_birds"]
 colo = c=['b', 'k', 'r','y', 'c']
-# graph = ax.scatter(embeddings_0[:,0], embeddings_0[:,1], embeddings_0[:,2], c=['b', 'k', 'r','y', 'c'])
+
 for n in range(embeddings_0.shape[0]):
     scat = ax.scatter(embeddings_0[n,0], embeddings_0[n,1], embeddings_0[n,2], c=colo[n], label=legend[n])
     scatters.append(scat)
-# ax.scatter(embeddings_0[1,0], embeddings_0[1,1], embeddings_0[1,2], c='k', label = "black")
-# ax.scatter(embeddings_0[2,0], embeddings_0[2,1], embeddings_0[2,2], c='r',label=)
-# ax.scatter(embeddings_0[3,0], embeddings_0[3,1], embeddings_0[3,2], c='y',label=)
-# ax.scatter(embeddings_0[4,0], embeddings_0[4,1], embeddings_0[4,2], c='c', label=)
+
 ax.legend()
 
 
